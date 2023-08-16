@@ -1,0 +1,118 @@
+cadastrar As screen:
+    Fill: =RGBA(242, 239, 223, 1)
+    LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =109
+        Width: =640
+        ZIndex: =2
+
+    Icon6 As icon.ArrowLeft:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Tela_inicial)
+        X: =14
+        Y: =1020
+        ZIndex: =3
+
+    Label2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Font: =Font.'Lato Black'
+        Height: =70
+        Size: =28
+        Text: ="Cadastre novos produtos"
+        Width: =560
+        X: =64
+        Y: =22
+        ZIndex: =4
+
+    nomedoproduto As text:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        BorderThickness: =2
+        Color: =RGBA(21, 10, 64, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =70
+        HoverBorderColor: =RGBA(92, 74, 168, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(185, 173, 246, 1)
+        Size: =21
+        Width: =560
+        Y: =286
+        ZIndex: =5
+
+    Label7 As label:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(21, 10, 64, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =66
+        Size: =21
+        Text: ="Nome do produto"
+        Width: =246
+        Y: =220
+        ZIndex: =6
+
+    Label7_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(21, 10, 64, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =66
+        Size: =21
+        Text: |-
+            ="Foto:"
+        Width: =246
+        Y: =446
+        ZIndex: =7
+
+    Camera As camera:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Camera: =0
+        Height: =379
+        Width: =579
+        X: =34
+        Y: =573
+        ZIndex: =8
+
+    cadastro As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: |+
+            =Patch(Produtos,Defaults(Produtos),
+            {
+                Nome: nomedoproduto.Text,
+                foto:Camera.Photo,
+                Quantidade: 0
+            });
+            
+            Notify("Produto cadastrado com sucesso");
+            
+            Navigate(Tela_inicial)
+            
+        Size: =18
+        Text: ="Cadastre o produto"
+        Width: =280
+        X: =164
+        Y: =1014
+        ZIndex: =9
+

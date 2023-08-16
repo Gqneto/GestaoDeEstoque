@@ -1,0 +1,53 @@
+{
+  "22b8a878-1300-4f50-b59b-f5b6b1296430": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://gqtec2307.sharepoint.com/sites/gestaodeestoque": {
+        "dataSources": {
+          "movimentacao": {
+            "tableName": "2cb1556c-e94e-47ce-8942-1f5aa3a0e47e"
+          },
+          "Problemas": {
+            "tableName": "42cad532-2337-4bea-9c82-e7a747810d4d"
+          },
+          "Produtos": {
+            "tableName": "b336714b-80e5-47b2-bf7e-89bb863b83f8"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Problemas",
+      "Produtos",
+      "movimentacao"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "22b8a878-1300-4f50-b59b-f5b6b1296430"
+  },
+  "cbd433ed-5d8f-4467-92c9-3dd76f347817": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "authenticationType": "shared-application",
+      "displayName": "Gmail",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/gmail/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_gmail",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Gmail"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "cbd433ed-5d8f-4467-92c9-3dd76f347817"
+  }
+}

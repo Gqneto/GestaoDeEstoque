@@ -1,0 +1,255 @@
+movimenta As screen:
+    Fill: =RGBA(242, 239, 223, 1)
+    LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =113
+        Width: =640
+        Y: =1
+        ZIndex: =2
+
+    Icon7 As icon.ArrowLeft:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Tela_inicial)
+        Y: =25
+        ZIndex: =3
+
+    Label3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =64
+        Size: =28
+        Text: ="Movimentação de estoque"
+        Width: =562
+        X: =77
+        Y: =25
+        ZIndex: =4
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Height: =661
+        Items: =Produtos
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =162
+        ZIndex: =5
+
+        Image2 As image:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =128
+            Image: =ThisItem.foto
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                =ThisItem.Nome & "- Quantidade:" & ThisItem.Quantidade
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image2.Width - 104
+            X: =Image2.X + Image2.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: |-
+                ="Adicionado por:" &ThisItem.'Modificado por'.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title2.Width
+            X: =Title2.X
+            Y: =Title2.Y + Title2.Height + 4
+            ZIndex: =3
+
+        Separator2 As rectangle:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Fill: =RGBA(92, 74, 168, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Icon5 As icon.Add:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =RGBA(92, 74, 168, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =78
+            Icon: =Icon.Add
+            OnSelect: |-
+                =UpdateContext({var_produto_selecionado : true})
+            X: =576
+            Y: =16
+            ZIndex: =6
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =672
+        Visible: =var_produto_selecionado
+        Width: =517
+        X: =53
+        Y: =425
+        ZIndex: =6
+
+        Rectangle1 As rectangle:
+            BorderColor: =RGBA(141, 198, 63, 1)
+            BorderThickness: =2
+            Fill: =RGBA(185, 173, 246, 1)
+            Height: =672
+            OnSelect: =
+            Width: =517
+            ZIndex: =1
+
+        txt_quantidade As text:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: ="0"
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Format: =TextFormat.Number
+            Height: =91
+            HoverBorderColor: =RGBA(92, 74, 168, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(185, 173, 246, 1)
+            Size: =21
+            Width: =250
+            X: =2
+            Y: =381
+            ZIndex: =2
+
+        txt_tipo As text:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: ="Entrada"
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =91
+            HoverBorderColor: =RGBA(92, 74, 168, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(185, 173, 246, 1)
+            Size: =21
+            Width: =250
+            X: =269
+            Y: =381
+            ZIndex: =3
+
+        Label8 As label:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =61
+            Size: =21
+            Text: |-
+                ="Tipo:"
+            Width: =238
+            X: =269
+            Y: =320
+            ZIndex: =4
+
+        Image4 As image:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =320
+            Image: |
+                =Gallery2.Selected.foto
+            Width: =320
+            X: =100
+            ZIndex: =5
+
+        Label10 As label:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =56
+            Size: =21
+            Text: |-
+                ="Quantidade:"
+            Width: =252
+            Y: =325
+            ZIndex: =6
+
+        Button2 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(30, 14, 91, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =101
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+            OnSelect: |+
+                =Patch(movimentacao,Defaults(movimentacao),
+                {
+                    idproduto:Gallery2.Selected.ID,
+                     quantidade_movimentada: Value(txt_quantidade.Text),
+                    tipo_movimetacao:txt_tipo.Text
+                });
+                
+                Patch(Produtos, LookUp(Produtos,ID = Gallery2.Selected.ID),
+                {
+                    Quantidade: If(txt_tipo.Text = "Entrada",Gallery2.Selected.Quantidade +Value(txt_quantidade.Text),
+                    Gallery2.Selected.Quantidade - Value(txt_quantidade.Text))
+                });
+                
+                
+                
+                Notify("Movimentação inserida com sucesso!");
+                
+            Size: =24
+            Text: ="Cadastrar movimentação"
+            Width: =400
+            X: =60
+            Y: =537
+            ZIndex: =7
+
+        Icon12 As icon.Cancel:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =RGBA(92, 74, 168, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({var_produto_selecionado: false})
+            X: =2
+            ZIndex: =8
+

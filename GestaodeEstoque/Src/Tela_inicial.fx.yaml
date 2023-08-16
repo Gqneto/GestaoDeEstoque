@@ -1,0 +1,140 @@
+Tela_inicial As screen:
+    BackgroundImage: =estoquista
+    Fill: =RGBA(127, 178, 57, 1)
+    ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+
+    novo_produto As button:
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: =Navigate(cadastrar)
+        Size: =20
+        Text: ="Cadastrar Produto"
+        Width: =473
+        X: =97
+        Y: =246
+        ZIndex: =1
+
+    Button1_1 As button:
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: =Navigate(movimenta)
+        Size: =18
+        Text: ="MOVIMENTAÇÃO DE ESTOQUE"
+        Width: =473
+        X: =97
+        Y: =399
+        ZIndex: =2
+
+    Button1_2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: =Navigate(relatorio)
+        Size: =18
+        Text: ="RELATORIO DE ESTOQUE"
+        Width: =473
+        X: =97
+        Y: =552
+        ZIndex: =3
+
+    Button1_3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =146
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: =Navigate(reportar)
+        Size: =18
+        Text: ="REPORTAR PROBLEMA"
+        Width: =473
+        X: =97
+        Y: =728
+        ZIndex: =4
+
+    Icon1 As icon.Warning:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(255, 255, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Warning
+        X: =506
+        Y: =769
+        ZIndex: =5
+
+    Icon2 As icon.ListScrollWatchlist:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =54
+        Icon: =Icon.ListScrollWatchlist
+        X: =495
+        Y: =596
+        ZIndex: =6
+
+    Icon3 As icon.ArrowsUpDown:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =60
+        Icon: =Icon.Sort
+        Width: =50
+        X: =520
+        Y: =440
+        ZIndex: =7
+
+    Icon4 As icon.Tag:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Tag
+        X: =495
+        Y: =287
+        ZIndex: =8
+
+    Rectangle3_3 As rectangle:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =139
+        Width: =640
+        ZIndex: =9
+
+    Label6 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =73
+        Size: =21
+        Text: ="BEM VINDO AO SEU GESTOR DE ESTOQUE!"
+        Width: =630
+        X: =10
+        Y: =33
+        ZIndex: =10
+

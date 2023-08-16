@@ -1,0 +1,169 @@
+reportar As screen:
+    Fill: =RGBA(242, 239, 223, 1)
+    LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+
+    Rectangle3_2 As rectangle:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Fill: =RGBA(152, 208, 70, 1)
+        Height: =113
+        Width: =640
+        ZIndex: =1
+
+    Icon9 As icon.ArrowLeft:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Tela_inicial)
+        Y: =26
+        ZIndex: =2
+
+    Label5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(252, 252, 249, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =28
+        Text: ="REPORTAR UM ERRO"
+        Width: =560
+        X: =40
+        Y: =26
+        ZIndex: =3
+
+    Icon10 As icon.Warning:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(255, 255, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Warning
+        X: =536
+        Y: =24
+        ZIndex: =4
+
+    Dropdown2 As dropdown:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        ChevronBackground: =RGBA(30, 14, 91, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =103
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(185, 173, 246, 1)
+        Items: =Produtos
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(92, 74, 168, 1)
+        SelectionFill: =RGBA(30, 14, 91, 1)
+        Size: =21
+        Width: =585
+        Y: =200
+        ZIndex: =5
+
+    Label9 As label:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="Produtos"
+        Width: =560
+        Y: =121
+        ZIndex: =6
+
+    txt_descricao As text:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =296
+        HoverBorderColor: =RGBA(92, 74, 168, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(185, 173, 246, 1)
+        Size: =21
+        Width: =560
+        X: =25
+        Y: =421
+        ZIndex: =7
+
+    Label12 As label:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Reporte o erro : "
+        Width: =560
+        Y: =349
+        ZIndex: =8
+
+    txt_responsavel As text:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =70
+        HoverBorderColor: =RGBA(92, 74, 168, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(185, 173, 246, 1)
+        Size: =21
+        Width: =560
+        X: =25
+        Y: =860
+        ZIndex: =9
+
+    Label13 As label:
+        BorderColor: =RGBA(92, 74, 168, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =70
+        Size: =21
+        Text: ="E-mail do responsável"
+        Width: =560
+        Y: =790
+        ZIndex: =10
+
+    Button1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+        OnSelect: |
+            =Patch(Problemas, Defaults(Problemas),
+            {
+                Nome_do_Produto:Dropdown2.Selected.Nome,
+                descrição:txt_descricao.Text,
+                responsavel:txt_responsavel.Text
+            });
+            
+            Gmail.SendEmailV2(txt_responsavel.Text, {Subject: "Novo problema reportado", Body: txt_descricao.Text})
+            ;
+            
+            Notify("Problema reportado com sucesso")
+        Size: =24
+        Text: ="Reportar erro!"
+        Visible: |
+            =true
+        Width: =280
+        X: =160
+        Y: =1026
+        ZIndex: =11
+
